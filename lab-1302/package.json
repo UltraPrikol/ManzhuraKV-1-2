@@ -1,0 +1,20 @@
+{
+  "name": "lab-1302",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.16.1",
+    "body-parser": "^1.18.3",
+    "ejs": "^5.0.2",
+    "express": "^4.16.0",
+    "sqlite3": "^5.0.0"
+  }
+}

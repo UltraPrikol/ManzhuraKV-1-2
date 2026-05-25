@@ -1,0 +1,79 @@
+{
+  "company": {
+    "name": "TechInnovations"
+  },
+  "departments": [
+    {
+      "name": "Development",
+      "code": "DEV",
+      "employee_ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Sales",
+      "code": "SAL",
+      "employee_ids": [
+        3
+      ]
+    }
+  ],
+  "employees": [
+    {
+      "type": "Manager",
+      "employee_id": 1,
+      "name": "Alice Johnson",
+      "department_code": "DEV",
+      "base_salary": 7000.0,
+      "bonus": 2000.0
+    },
+    {
+      "type": "Developer",
+      "employee_id": 2,
+      "name": "Bob Smith",
+      "department_code": "DEV",
+      "base_salary": 5000.0,
+      "skills": [
+        "Python",
+        "SQL"
+      ],
+      "level": "senior"
+    },
+    {
+      "type": "Salesperson",
+      "employee_id": 3,
+      "name": "Charlie Brown",
+      "department_code": "SAL",
+      "base_salary": 4000.0,
+      "commission_rate": 0.15,
+      "sales_target": 50000.0,
+      "current_sales": 30000
+    }
+  ],
+  "projects": [
+    {
+      "project_id": 101,
+      "name": "AI Platform",
+      "description": "Разработка AI системы",
+      "deadline": "2024-12-31",
+      "status": "active",
+      "budget": 200000.0,
+      "team_ids": [
+        2,
+        1
+      ]
+    },
+    {
+      "project_id": 102,
+      "name": "Web Portal",
+      "description": "Создание веб-портала",
+      "deadline": "2024-09-30",
+      "status": "planning",
+      "budget": 50000.0,
+      "team_ids": [
+        2
+      ]
+    }
+  ]
+}

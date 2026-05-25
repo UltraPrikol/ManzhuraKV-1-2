@@ -1,0 +1,3 @@
+project_id,name,description,deadline,status,budget,team_ids,team_total_salary
+101,AI Platform,Разработка AI системы,2024-12-31,active,200000.00,"2,1",16500.00
+102,Web Portal,Создание веб-портала,2024-09-30,planning,50000.00,2,7500.00

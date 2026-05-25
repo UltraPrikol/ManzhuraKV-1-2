@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comment Board</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .comment { border: 1px solid #ccc; padding: 10px; margin: 10px 0; }
+        .username { font-weight: bold; color: #333; }
+        .date { font-size: 0.8em; color: #666; }
+        .error { color: red; }
+        form { margin: 20px 0; }
+        input, textarea { width: 300px; margin: 5px 0; }
+        button { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Comment Board</h1>
+    
+    <form action="/comment" method="POST">
+        <div>
+            <label>Username:</label><br>
+            <input type="text" name="username" placeholder="Your name">
+        </div>
+        <div>
+            <label>Comment:</label><br>
+            <textarea name="comment" rows="4" cols="40" placeholder="Your comment"></textarea>
+        </div>
+        <button type="submit">Post Comment</button>
+    </form>
+    
+    <h2>Comments</h2>
+    
+    <% if (error) { %>
+        <div class="error"><%= error %></div>
+    <% } %>
+    
+    <% comments.forEach(function(comment) { %>
+        <div class="comment">
+            <div class="username"><%= comment.username %></div>
+            <div class="comment-text"><%= comment.comment %></div>
+            <div class="date"><%= comment.created_at %></div>
+        </div>
+    <% }); %>
+    
+    <div id="api-data">
+        <h3>API Data</h3>
+        <button onclick="loadComments()">Load Comments via API</button>
+        <div id="api-result"></div>
+    </div>
+    
+   <script>
+        // БЕЗОПАСНО: Использование DOM API вместо innerHTML
+        function loadComments() {
+            fetch('/api/comments')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('api-result');
+                    container.innerHTML = ''; // Очистка
+                    
+                    data.forEach(comment => {
+                        const div = document.createElement('div');
+                        // textContent автоматически экранирует HTML-теги
+                        div.textContent = comment.username + ': ' + comment.comment;
+                        container.appendChild(div);
+                    });
+                });
+        }
+        
+        // БЕЗОПАСНО: Отказ от eval()
+        function executeCode() {
+            const code = document.getElementById('user-code').value;
+            try {
+                // Разбираем как JSON вместо выполнения как кода
+                const data = JSON.parse(code);
+                console.log('Parsed data:', data);
+                alert('Valid JSON parsed! Check console.');
+            } catch (e) {
+                alert('Invalid JSON! Execution is disabled.');
+            }
+        }
+    </script>
+</body>
+</html>

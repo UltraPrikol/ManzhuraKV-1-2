@@ -1,0 +1,41 @@
+{
+    "department": "IT & Sales",
+    "employees": [
+        {
+            "type": "developer",
+            "id": 1,
+            "name": "Иван",
+            "department": "IT",
+            "base_salary": 80000.0,
+            "tech_stack": [
+                "Python",
+                "Django"
+            ],
+            "seniority_level": "senior"
+        },
+        {
+            "type": "manager",
+            "id": 2,
+            "name": "Мария",
+            "department": "IT",
+            "base_salary": 90000.0,
+            "bonus": 15000.0
+        },
+        {
+            "type": "salesperson",
+            "id": 3,
+            "name": "Олег",
+            "department": "Продажи",
+            "base_salary": 50000.0,
+            "commission_rate": 0.1,
+            "sales_volume": 200000
+        },
+        {
+            "type": "employee",
+            "id": 4,
+            "name": "Татьяна",
+            "department": "HR",
+            "base_salary": 40000.0
+        }
+    ]
+}

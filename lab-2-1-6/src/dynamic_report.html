@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Динамический отчет на R Markdown</title>
+<style>
+body { font-family: Arial, sans-serif; line-height: 1.6; background-color: #f9f9f9; color: #333; }
+h1, h2, h3 { color: #2a5d84; }
+pre { background-color: #eef6f9; padding: 10px; border-radius: 5px; }
+code { background-color: #f1f1f1; padding: 2px 5px; border-radius: 3px; }
+blockquote { border-left: 4px solid #2a5d84; padding-left: 10px; color: #555; }
+</style>
+</head>
+<body>
+<h1>Динамический отчет на R Markdown</h1>
+
+<h2>Введение</h2>
+<p>Это пример <b>динамического документа</b> на R Markdown. Здесь будут как inline-вставки кода, так и полноценные чанки.</p>
+
+<h2>Пример inline-кода</h2>
+<p>Текущая дата: 2025-12-03</p>
+
+<h2>Пример чанка с расчетами</h2>
+<pre><code>set.seed(123)
+x <- rnorm(10, mean = 50, sd = 10)
+mean_x <- mean(x)
+mean_x</code></pre>
+
+<p>Среднее значение сгенерированных чисел равно <b>49.22</b></p>
+
+<h2>Визуализация</h2>
+<img src="histogram.png" alt="Гистограмма">
+
+<h2>Список и форматирование</h2>
+<ul>
+<li><b>Жирный текст</b></li>
+<li><i>Курсив</i></li>
+<li><s>Зачеркнутый текст</s></li>
+<li><code>Моноширинный текст</code></li>
+</ul>
+
+<blockquote>Блок цитаты для выделения важных замечаний.</blockquote>
+
+</body>
+</html>

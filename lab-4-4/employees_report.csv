@@ -1,0 +1,4 @@
+employee_id,name,department_code,type,base_salary,calculated_salary,extra
+1,Alice Johnson,DEV,Manager,7000.00,9000.00,"{""bonus"": 2000.0}"
+2,Bob Smith,DEV,Developer,5000.00,7500.00,"{""skills"": ""Python,SQL"", ""level"": ""senior""}"
+3,Charlie Brown,SAL,Salesperson,4000.00,8500.00,"{""commission_rate"": 0.15, ""sales_target"": 50000.0, ""current_sales"": 30000}"

@@ -1,0 +1,45 @@
+# ===== КЛАСС КОПИЛКА =====
+
+piggybank <- function(limit = 1000) {
+  structure(list(
+    balance = 0,
+    limit = limit
+  ), class = "piggybank")
+}
+
+# --- Добавление денег ---
+deposit <- function(pb, amount) {
+  if (pb$balance + amount > pb$limit) {
+    cat("Нельзя добавить: превышен лимит!\n")
+  } else {
+    pb$balance <- pb$balance + amount
+    cat("В копилку добавлено", amount, "\n")
+  }
+  return(pb)
+}
+
+# --- Снятие денег ---
+withdraw <- function(pb, amount) {
+  if (amount > pb$balance) {
+    cat("Недостаточно средств!\n")
+  } else {
+    pb$balance <- pb$balance - amount
+    cat("Вы сняли", amount, "\n")
+  }
+  return(pb)
+}
+
+# --- Баланс ---
+check_balance <- function(pb) {
+  cat("Баланс копилки:", pb$balance, "\n")
+}
+
+
+bank <- piggybank(limit = 500)
+
+bank <- deposit(bank, 200)
+bank <- deposit(bank, 400) # превышение лимита
+check_balance(bank)
+
+bank <- withdraw(bank, 50)
+check_balance(bank)
