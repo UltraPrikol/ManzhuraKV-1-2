@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import { blogPosts } from './data'
 
+async function getBooks() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/books`);
+  if (!res.ok) throw new Error('Failed to fetch');
+  return res.json();
+}
+
 export default function BlogPage() {
   return (
     <div className="py-8">

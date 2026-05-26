@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Settings:
-    DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:pass@localhost:5432/bookdb")
+    DATABASE_URL = os.getenv("DATABASE_URL")
     POSTGRES_USER = os.getenv("POSTGRES_USER", "bookuser")
     POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "bookpass")
     POSTGRES_DB = os.getenv("POSTGRES_DB", "bookdb")
